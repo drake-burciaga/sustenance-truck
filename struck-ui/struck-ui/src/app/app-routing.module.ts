@@ -7,7 +7,7 @@ import { NewUserComponent } from './auth/new-user/new-user.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  // always available for everyone to see
+  // always available for everyone to see 
   { path: 'login', component: LoginComponent},
   { path: 'register', component: NewUserComponent},
   { path: 'forgot-password', component: ForgotComponent},
