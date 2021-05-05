@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+    <div class="content-section">
+        <form method="POST", action="">
+            <!-- Hidden tag protects against CSRF attacks -->
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Join Us Today!</legend>
+                <!-- Username -->
+                <div class="form-group">
+                    {{ form.username.label(class="form-control-label") }}
+                    {{ form.username(class="form-control form-control-lg") }}
+                </div> <!-- end of div username -->
+                <!-- Email -->
+                <div class="form-group">
+                    {{ form.email.label(class="form-control-label") }}
+                    {{ form.email(class="form-control form-control-lg") }}
+                </div> <!-- end of div email -->
+                <!-- Password -->
+                <div class="form-group">
+                    {{ form.password.label(class="form-control-label") }}
+                    {{ form.password(class="form-control form-control-lg") }}
+                </div> <!-- end of div password -->
+                <!-- Confirm Password -->
+                <div class="form-group">
+                    {{ form.confirm_password.label(class="form-control-label") }}
+                    {{ form.confirm_password(class="form-control form-control-lg") }}
+                </div> <!-- end of div confirm_password -->
+            </fieldset>
+            <div class="form-group">
+                {{ form.submit(class="btn btn-outline-info") }}
+            </div> <!-- end of div submit -->
+            <div class="border-top pt-3">
+                <small class="text-muted">
+                    Already Have An Account? <a class="ml-2" href="{{ url_for('login') }}">Sign In</a>
+                </small>
+            </div> <!-- end of div border-top pt-3 -->
+        </form>
+    </div> <!-- end of div content-section -->
+
+{% endblock content %}  
