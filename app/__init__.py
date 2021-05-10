@@ -11,5 +11,6 @@ bcrypt = Bcrypt(app)
 login_manager = LoginManager(app)
 # pass in function name for route
 login_manager.login_view = 'login'
+login_manager.login_message_category = 'info'
 
 from app import routes
